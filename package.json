@@ -1,0 +1,14 @@
+{
+  "name": "notes-node",
+  "version": "1.0.0",
+  "description": "A Note taking app with node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amitava Das Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
