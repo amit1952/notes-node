@@ -1,22 +1,24 @@
 console.log('Starting notes.js...');
 
-module.exports.addNote = () => {
-    console.log('addNote');
-    return "New note";
+var addNote = (title, body) => {
+    console.log("Adding note:", title, body);
 };
 
-let command = process.argv[2];
-console.log("Command:", command);
-console.log(process.argv);
+var getAll = () => {
+    console.log("Getting all notes.");
+};
 
-if (command === "add") {
-    console.log("Add new note");
-} else if (command === "list") {
-    console.log("Listing all notes");
-} else if (command === "read") {
-    console.log("Read a note");
-} else if (command === "remove") {
-    console.log("Removing a note");
-} else {
-    console.log("Command not recognized");
-}
+var readNote = (title) => {
+    console.log("Reading note with title:", title);
+};
+
+var removeNote = (title) => {
+    console.log("Removing note with title:", title);
+};
+
+module.exports = {
+    addNote,
+    getAll,
+    readNote,
+    removeNote
+};
