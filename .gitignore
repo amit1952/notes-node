@@ -77,3 +77,4 @@ typings/
 # Configuration Directory
 .idea
 /greetings.txt
+/notes-data.json
