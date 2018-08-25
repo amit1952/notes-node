@@ -12,7 +12,7 @@ console.log("Command:", command);
 console.log("Yargs:", argv);
 
 if (command === "add") {
-    var note = notes.addNote(argv.title, argv.body);
+    let note = notes.addNote(argv.title, argv.body);
     if (note) {
         console.log("The note was created successfully");
         console.log('---');
@@ -26,7 +26,9 @@ if (command === "add") {
 } else if (command === "read") {
     notes.readNote(argv.title);
 } else if (command === "remove") {
-    notes.removeNote(argv.title);
+    let removed = notes.removeNote(argv.title);
+    let message = removed ? `The note titled ${argv.title} was removed` : 'Note not found';
+    console.log(message);
 } else {
     console.log("Command not recognized");
 }

@@ -45,7 +45,14 @@ const readNote = (title) => {
 };
 
 const removeNote = (title) => {
-    console.log("Removing note with title:", title);
+//    Fetch all notes into an array
+    let notes = fetchNotes();
+//    Filter the notes, leaving out the one to be removed
+    let filteredNotes = notes.filter((note) => note.title !== title);
+//    save new notes array
+    saveNotes(filteredNotes);
+
+    return notes.length !== filteredNotes.length; // If true, note was removed
 };
 
 module.exports = {
