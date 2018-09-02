@@ -20,7 +20,9 @@ if (command === "add") {
         console.log("Failed to create new note. \nPerhaps a duplicate title exists");
     }
 } else if (command === "list") {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing out ${allNotes.length} note(s).`);
+    allNotes.forEach((note) => notes.logNote(note));
 } else if (command === "read") {
     let note = notes.getNote(argv.title);
     if (note) {

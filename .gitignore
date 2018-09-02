@@ -78,3 +78,4 @@ typings/
 .idea
 /greetings.txt
 /notes-data.json
+/playground/debugging.js
